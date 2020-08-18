@@ -1,4 +1,4 @@
-u"""User model"""
+"""User model"""
 from sqlalchemy import Column, Integer, String, ARRAY, Text
 
 from models.db import Model
