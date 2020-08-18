@@ -82,7 +82,7 @@ class TutorialData(BaseObject, Model):
     def get_fb_sound(self):
         return str(self.playFbSound)
 
-    ef get_fb_time(self):
+    def get_fb_time(self):
         return str(self.fbTime)
 
     def errors(self):
