@@ -12,7 +12,7 @@ from flask_mail import Mail, Message
 from models.db import db
 from models.install import install_models
 
-#from config import config
+from config import config
 
 warnings.filterwarnings("ignore")
 
