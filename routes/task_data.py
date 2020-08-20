@@ -10,7 +10,7 @@ def create_dataframe(user_id):
     content     = request.json
     task_data   = TaskData()
 
-    task_data.userID            = int(user_id)
+    task_data.userID            = str(content['userID'])
     task_data.trialTime         = str(content['trialTime'])
     task_data.taskSessionTry    = str(content['taskSessionTry'])
     task_data.trialNum          = str(content['trialNum'])

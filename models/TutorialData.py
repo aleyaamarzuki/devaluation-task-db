@@ -9,7 +9,7 @@ class TutorialData(BaseObject, Model):
 
     id = Column(Integer, primary_key=True)
 
-    userID              = Column(Integer)
+    userID              = Column(Text(length=10000))
     tutorialSession     = Column(Text(length=10000))
     tutorialSessionTry  = Column(Text(length=10000))
     trialNum            = Column(Text(length=10000))
@@ -44,7 +44,7 @@ class TutorialData(BaseObject, Model):
         return str(self.trialNum)
 
     def get_trial_time(self):
-        return str(self.UserNo)
+        return str(self.trialTime)
 
     def get_fix_time(self):
         return str(self.fixTime)

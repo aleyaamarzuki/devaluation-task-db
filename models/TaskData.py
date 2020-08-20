@@ -9,7 +9,7 @@ class TaskData(BaseObject, Model):
 
     id = Column(Integer, primary_key=True)
 
-    userID                = Column(Integer)
+    userID                = Column(Text(length=10000))
     taskSessionTry        = Column(Text(length=10000))
     trialNum              = Column(Text(length=10000))
     trialTime             = Column(Text(length=10000))

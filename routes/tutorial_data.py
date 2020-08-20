@@ -1,7 +1,6 @@
 """users routes"""
 from flask import current_app as app, jsonify, request
-from models import TrainingBehaviour, BaseObject
-
+from models import TutorialData, BaseObject
 
 @app.route('/tutorial_data/<user_id>', methods=['POST', 'GET'])
 
@@ -10,7 +9,7 @@ def create_tutorial_data(user_id):
     content                         = request.json
     tutorial_data                   = TutorialData()
 
-    tutorial_data.userID                = int(user_id)
+    tutorial_data.userID                = str(content['userID'])
     tutorial_data.tutorialSession       = str(content['tutorialSession'])
     tutorial_data.tutorialSessionTry    = str(content['tutorialSessionTry'])
     tutorial_data.trialNum              = str(content['trialNum'])

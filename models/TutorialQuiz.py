@@ -9,14 +9,12 @@ class TutorialQuiz(BaseObject, Model):
 
     id = Column(Integer, primary_key=True)
 
-    userID               = Column(Integer)
-    quizTime            = Column(Text(length=10000))
+    userID               = Column(Text(length=10000))
+    quizTime             = Column(Text(length=10000))
     tutorialSession      = Column(Text(length=10000))
     tutorialSessionTry   = Column(Text(length=10000))
     quizSession          = Column(Text(length=10000))
     quizQnNum            = Column(Text(length=10000))
-    quizKeypress         = Column(Text(length=10000))
-    quizQnRT             = Column(Text(length=10000))
     quizKeypress         = Column(Text(length=10000))
     quizQnRT             = Column(Text(length=10000))
     quizScoreCor         = Column(Text(length=10000))
