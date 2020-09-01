@@ -19,7 +19,6 @@ class TutorialQuiz(BaseObject, Model):
     quizQnRT             = Column(Text(length=10000))
     quizScoreCor         = Column(Text(length=10000))
 
-
     def get_id(self):
         return str(self.id)
 

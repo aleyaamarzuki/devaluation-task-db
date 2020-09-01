@@ -10,6 +10,7 @@ class TaskData(BaseObject, Model):
     id = Column(Integer, primary_key=True)
 
     userID                = Column(Text(length=10000))
+    taskSession           = Column(Text(length=10000))
     taskSessionTry        = Column(Text(length=10000))
     trialNum              = Column(Text(length=10000))
     trialTime             = Column(Text(length=10000))
@@ -36,6 +37,9 @@ class TaskData(BaseObject, Model):
 
     def get_user_id(self):
         return str(self.userID)
+
+    def get_task_session(self):
+        return str(self.taskSession)
 
     def get_task_session_try(self):
         return str(self.taskSessionTry)
