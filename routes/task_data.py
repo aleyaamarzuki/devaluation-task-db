@@ -8,6 +8,7 @@ def create_task_data(user_id):
     content = request.json
     task_data = TaskData()
     task_data.userID = str(content['userID'])
+    task_data.taskSession = str(content['taskSession'])
     task_data.taskSessionTry = str(content['taskSessionTry'])
     task_data.trialNum = str(content['trialNum'])
     task_data.trialTime = str(content['trialTime'])
