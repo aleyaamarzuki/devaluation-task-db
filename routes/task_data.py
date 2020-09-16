@@ -5,6 +5,7 @@ from sqlalchemy.sql.expression import func
 
 @app.route('/task_data/<user_id>', methods=['POST', 'GET'])
 def create_task_data(user_id):
+    print(user_id)
     content = request.json
     task_data = TaskData()
     task_data.userID = str(content['userID'])

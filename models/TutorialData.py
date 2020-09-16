@@ -24,6 +24,7 @@ class TutorialData(BaseObject, Model):
     randProb            = Column(Text(length=10000))
     responseKey         = Column(Text(length=10000))
     reactionTime        = Column(Text(length=10000))
+    responseAvoid       = Column(Text(length=10000))
     playFbSound         = Column(Text(length=10000))
     fbTime              = Column(Text(length=10000))
 
@@ -74,6 +75,9 @@ class TutorialData(BaseObject, Model):
 
     def get_reaction_time(self):
         return str(self.reactionTime)
+
+    def get_response_avoid(self):
+        return str(self.responseAvoid)
 
     def get_fb_sound(self):
         return str(self.playFbSound)

@@ -7,6 +7,7 @@ from models.TaskData import TaskData
 from models.TaskQuiz import TaskQuiz
 from models.TutorialData import TutorialData
 from models.TutorialQuiz import TutorialQuiz
+from models.AttenData import AttenData
 from models.Test import Test
 
 __all__ = (
@@ -16,5 +17,6 @@ __all__ = (
     'TutorialQuiz',
     'TaskData',
     'TaskQuiz',
+    'AttenData',
     'Test',
 )

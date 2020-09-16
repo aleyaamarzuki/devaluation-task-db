@@ -22,6 +22,7 @@ def create_tutorial_data(user_id):
     tutorial_data.randProb = str(content['randProb'])
     tutorial_data.responseKey = str(content['responseKey'])
     tutorial_data.reactionTime = str(content['reactionTime'])
+    tutorial_data.responseAvoid = str(content['responseAvoid'])
     tutorial_data.playFbSound = str(content['playFbSound'])
     tutorial_data.fbTime = str(content['fbTime'])
     BaseObject.check_and_save(tutorial_data)
