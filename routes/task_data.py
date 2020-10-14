@@ -20,7 +20,7 @@ def create_task_data(user_id):
     task_data.attenIndex = str(content['attenIndex'])
     task_data.attenCheckKey = str(content['attenCheckKey'])
     task_data.attenCheckTime = str(content['attenCheckTime'])
-    task_data.stimIndex = str(content['stimIndex'])
+    task_data.stimIndexCondIndiv = str(content['stimIndexCondIndiv'])
     task_data.stimTime = str(content['stimTime'])
     task_data.fbProbTrack = str(content['fbProbTrack'])
     task_data.randProb = str(content['randProb'])

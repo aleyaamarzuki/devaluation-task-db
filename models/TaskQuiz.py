@@ -15,14 +15,16 @@ class TaskQuiz(BaseObject, Model):
     taskSessionTry       = Column(Text(length=10000))
     quizQnNum            = Column(Text(length=10000))
     quizQnRT             = Column(Text(length=10000))
+    quizStimIndex        = Column(Text(length=10000))
     quizContinDefault    = Column(Text(length=10000))
     quizContin           = Column(Text(length=10000))
     quizConfDefault      = Column(Text(length=10000))
     quizConf             = Column(Text(length=10000))
+    soundQuizLabel       = Column(Text(length=10000))
     playNum              = Column(Text(length=10000))
-    quizAverDefault = Column(Text(length=10000))
-    quizAver = Column(Text(length=10000))
-    soundQuizLabel = Column(Text(length=10000))
+    quizAverDefault      = Column(Text(length=10000))
+    quizAver             = Column(Text(length=10000))
+
 
     def get_id(self):
         return str(self.id)
@@ -45,6 +47,9 @@ class TaskQuiz(BaseObject, Model):
     def get_quiz_rt(self):
         return str(self.quizQnRT)
 
+    def get_stim_index(self):
+        return str(self.quizStimIndex)
+
     def get_contin_def(self):
         return str(self.quizContinDefault)
 
@@ -57,6 +62,9 @@ class TaskQuiz(BaseObject, Model):
     def get_conf(self):
         return str(self.quizConf)
 
+    def get_sound_label(self):
+        return str(self.soundQuizLabel)
+
     def get_playNum(self):
         return str(self.playNum)
 
@@ -66,8 +74,6 @@ class TaskQuiz(BaseObject, Model):
     def get_sound_aver(self):
         return str(self.quizAver)
 
-    def get_sound_label(self):
-        return str(self.soundQuizLabel)
 
 
     def errors(self):

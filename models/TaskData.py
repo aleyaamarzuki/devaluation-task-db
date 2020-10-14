@@ -21,7 +21,7 @@ class TaskData(BaseObject, Model):
     attenIndex            = Column(Text(length=10000))
     attenCheckKey         = Column(Text(length=10000))
     attenCheckTime        = Column(Text(length=10000))
-    stimIndex             = Column(Text(length=10000))
+    stimIndexCondIndiv    = Column(Text(length=10000))
     stimTime              = Column(Text(length=10000))
     fbProbTrack           = Column(Text(length=10000))
     randProb              = Column(Text(length=10000))
@@ -72,7 +72,7 @@ class TaskData(BaseObject, Model):
         return str(self.attenCheckTime)
 
     def get_stim_index(self):
-        return str(self.stimIndex)
+        return str(self.stimIndexCondIndiv)
 
     def get_stim_time(self):
         return str(self.stimTime)
