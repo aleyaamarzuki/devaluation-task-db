@@ -17,7 +17,7 @@ def create_task_data(user_id):
     task_data.trialinBlockNum = str(content['trialinBlockNum'])
     task_data.devaluedBlock = str(content['devaluedBlock'])
     task_data.fixTime = str(content['fixTime'])
-    task_data.attenIndex = str(content['attenIndex'])
+    task_data.attenIndexIndiv = str(content['attenIndexIndiv'])
     task_data.attenCheckKey = str(content['attenCheckKey'])
     task_data.attenCheckTime = str(content['attenCheckTime'])
     task_data.stimIndexCondIndiv = str(content['stimIndexCondIndiv'])

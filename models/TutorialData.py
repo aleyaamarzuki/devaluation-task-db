@@ -24,7 +24,6 @@ class TutorialData(BaseObject, Model):
     randProb            = Column(Text(length=10000))
     responseKey         = Column(Text(length=10000))
     reactionTime        = Column(Text(length=10000))
-    responseAvoid       = Column(Text(length=10000))
     playFbSound         = Column(Text(length=10000))
     fbTime              = Column(Text(length=10000))
 

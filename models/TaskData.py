@@ -18,7 +18,7 @@ class TaskData(BaseObject, Model):
     trialinBlockNum       = Column(Text(length=10000))
     devaluedBlock         = Column(Text(length=10000))
     fixTime               = Column(Text(length=10000))
-    attenIndex            = Column(Text(length=10000))
+    attenIndexIndiv       = Column(Text(length=10000))
     attenCheckKey         = Column(Text(length=10000))
     attenCheckTime        = Column(Text(length=10000))
     stimIndexCondIndiv    = Column(Text(length=10000))
@@ -63,7 +63,7 @@ class TaskData(BaseObject, Model):
         return str(self.fixTime)
 
     def get_atten_index(self):
-        return str(self.attenIndex)
+        return str(self.attenIndexIndiv)
 
     def get_attencheck_key(self):
         return str(self.attenCheckKey)
