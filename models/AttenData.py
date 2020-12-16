@@ -4,12 +4,12 @@ from sqlalchemy import Column, Integer, String, ARRAY, Text
 from models.db import Model
 from models.base_object import BaseObject
 
-
 class AttenData(BaseObject, Model):
 
     id = Column(Integer, primary_key=True)
-
     userID = Column(Text(length=10000))
+    date                = Column(Text(length=10000))
+    startTime           = Column(Text(length=10000))
     tutorialSession = Column(Text(length=10000))
     tutorialSessionTry = Column(Text(length=10000))
     taskSession = Column(Text(length=10000))
@@ -27,6 +27,12 @@ class AttenData(BaseObject, Model):
     def get_user_id(self):
         return str(self.userID)
 
+    def get_date(self):
+        return str(self.date)
+
+    def get_startTime(self):
+        return str(self.startTime)
+        
     def get_tutorial_session(self):
         return str(self.tutorialSession)
 

@@ -10,6 +10,8 @@ class TutorialQuiz(BaseObject, Model):
     id = Column(Integer, primary_key=True)
 
     userID               = Column(Text(length=10000))
+    date                 = Column(Text(length=10000))
+    startTime            = Column(Text(length=10000))
     quizTime             = Column(Text(length=10000))
     tutorialSession      = Column(Text(length=10000))
     tutorialSessionTry   = Column(Text(length=10000))
@@ -24,6 +26,12 @@ class TutorialQuiz(BaseObject, Model):
 
     def get_user_id(self):
         return str(self.userID)
+
+    def get_date(self):
+        return str(self.date)
+
+    def get_startTime(self):
+        return str(self.startTime)
 
     def get_trial_time(self):
         return str(self.quizTime)

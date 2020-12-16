@@ -8,7 +8,7 @@ from models.TaskQuiz import TaskQuiz
 from models.TutorialData import TutorialData
 from models.TutorialQuiz import TutorialQuiz
 from models.AttenData import AttenData
-from models.Test import Test
+from models.VolCal import VolCal
 
 __all__ = (
     'ApiErrors',
@@ -18,5 +18,5 @@ __all__ = (
     'TaskData',
     'TaskQuiz',
     'AttenData',
-    'Test',
+    'VolCal',
 )

@@ -8,6 +8,8 @@ def create_tutorial_data(user_id):
     content = request.json
     tutorial_data = TutorialData()
     tutorial_data.userID = str(content['userID'])
+    tutorial_data.date        = str(content['date'])
+    tutorial_data.startTime   = str(content['startTime'])
     tutorial_data.tutorialSession = str(content['tutorialSession'])
     tutorial_data.tutorialSessionTry = str(content['tutorialSessionTry'])
     tutorial_data.trialNum = str(content['trialNum'])

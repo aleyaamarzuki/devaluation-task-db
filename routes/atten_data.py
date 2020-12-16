@@ -7,8 +7,10 @@ from sqlalchemy.sql.expression import func
 def create_atten_data(user_id):
     print(user_id)
     content = request.json
-    atten_data = TaskData()
+    atten_data = AttenData()
     atten_data.userID = str(content['userID'])
+    atten_data.date        = str(content['date'])
+    atten_data.startTime   = str(content['startTime'])
     atten_data.tutorialSession = str(content['tutorialSession'])
     atten_data.tutorialSessionTry = str(content['tutorialSessionTry'])
     atten_data.taskSession = str(content['taskSession'])

@@ -8,6 +8,8 @@ def create_tutorial_quiz(user_id):
     content = request.json
     tutorial_quiz = TutorialQuiz()
     tutorial_quiz.userID = str(content['userID'])
+    tutorial_quiz.date        = str(content['date'])
+    tutorial_quiz.startTime   = str(content['startTime'])
     tutorial_quiz.quizTime = str(content['quizTime'])
     tutorial_quiz.tutorialSession = str(content['tutorialSession'])
     tutorial_quiz.tutorialSessionTry = str(content['tutorialSessionTry'])

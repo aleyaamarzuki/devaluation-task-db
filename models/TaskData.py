@@ -10,6 +10,8 @@ class TaskData(BaseObject, Model):
     id = Column(Integer, primary_key=True)
 
     userID                = Column(Text(length=10000))
+    date                = Column(Text(length=10000))
+    startTime           = Column(Text(length=10000))
     taskSession           = Column(Text(length=10000))
     taskSessionTry        = Column(Text(length=10000))
     trialNum              = Column(Text(length=10000))
@@ -27,7 +29,6 @@ class TaskData(BaseObject, Model):
     randProb              = Column(Text(length=10000))
     responseKey           = Column(Text(length=10000))
     reactionTime          = Column(Text(length=10000))
-    responseAvoid         = Column(Text(length=10000))
     playFbSound           = Column(Text(length=10000))
     fbTime                = Column(Text(length=10000))
 
@@ -37,6 +38,12 @@ class TaskData(BaseObject, Model):
 
     def get_user_id(self):
         return str(self.userID)
+
+    def get_date(self):
+        return str(self.date)
+
+    def get_startTime(self):
+        return str(self.startTime)
 
     def get_task_session(self):
         return str(self.taskSession)
@@ -88,9 +95,6 @@ class TaskData(BaseObject, Model):
 
     def get_reaction_time(self):
         return str(self.reactionTime)
-
-    def get_response_avoid(self):
-        return str(self.responseAvoid)
 
     def get_fb_sound(self):
         return str(self.playFbSound)

@@ -10,17 +10,23 @@ class TaskQuiz(BaseObject, Model):
     id = Column(Integer, primary_key=True)
 
     userID               = Column(Text(length=10000))
+    date                = Column(Text(length=10000))
+    startTime           = Column(Text(length=10000))
     quizTime             = Column(Text(length=10000))
     taskSession          = Column(Text(length=10000))
     taskSessionTry       = Column(Text(length=10000))
+    section             = Column(Text(length=10000))
     quizQnNum            = Column(Text(length=10000))
     quizQnRT             = Column(Text(length=10000))
+    quizStimIndexCount   = Column(Text(length=10000))
     quizStimIndex        = Column(Text(length=10000))
+    quizStimContin       = Column(Text(length=10000))
+    quizStimDevalue      = Column(Text(length=10000))
     quizContinDefault    = Column(Text(length=10000))
     quizContin           = Column(Text(length=10000))
     quizConfDefault      = Column(Text(length=10000))
     quizConf             = Column(Text(length=10000))
-    soundQuizLabel       = Column(Text(length=10000))
+    quizSoundLabel       = Column(Text(length=10000))
     playNum              = Column(Text(length=10000))
     quizAverDefault      = Column(Text(length=10000))
     quizAver             = Column(Text(length=10000))
@@ -32,6 +38,12 @@ class TaskQuiz(BaseObject, Model):
     def get_user_id(self):
         return str(self.userID)
 
+    def get_date(self):
+        return str(self.date)
+
+    def get_startTime(self):
+        return str(self.startTime)
+
     def get_trial_time(self):
         return str(self.quizTime)
 
@@ -41,14 +53,26 @@ class TaskQuiz(BaseObject, Model):
     def get_task_session_try(self):
         return str(self.taskSessionTry)
 
+    def get_quiz_section(self):
+        return str(self.section)
+
     def get_quiz_question_no(self):
         return str(self.quizQnNum)
 
     def get_quiz_rt(self):
         return str(self.quizQnRT)
 
+    def get_stim_index_count(self):
+        return str(self.quizStimIndexCount)
+
     def get_stim_index(self):
         return str(self.quizStimIndex)
+
+    def get_stim_contin(self):
+        return str(self.quizStimContin)
+
+    def get_stim_devalue(self):
+        return str(self.quizStimDevalue)
 
     def get_contin_def(self):
         return str(self.quizContinDefault)
@@ -63,7 +87,7 @@ class TaskQuiz(BaseObject, Model):
         return str(self.quizConf)
 
     def get_sound_label(self):
-        return str(self.soundQuizLabel)
+        return str(self.quizSoundLabel)
 
     def get_playNum(self):
         return str(self.playNum)
@@ -73,8 +97,6 @@ class TaskQuiz(BaseObject, Model):
 
     def get_sound_aver(self):
         return str(self.quizAver)
-
-
 
     def errors(self):
         errors = super(TaskQuiz, self).errors()
