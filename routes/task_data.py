@@ -30,6 +30,7 @@ def create_task_data(user_id):
     task_data.reactionTime = str(content['reactionTime'])
     task_data.playFbSound = str(content['playFbSound'])
     task_data.fbTime = str(content['fbTime'])
+    task_data.volume = str(content['volume'])
     BaseObject.check_and_save(task_data)
     result = dict({"success": "yes"})
     return jsonify(result)

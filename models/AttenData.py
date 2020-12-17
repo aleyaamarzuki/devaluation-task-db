@@ -19,7 +19,7 @@ class AttenData(BaseObject, Model):
     attenCheckKey = Column(Text(length=10000))
     attenCheckTime = Column(Text(length=10000))
     playAttCheck = Column(Text(length=10000))
-
+    volume = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -32,7 +32,7 @@ class AttenData(BaseObject, Model):
 
     def get_startTime(self):
         return str(self.startTime)
-        
+
     def get_tutorial_session(self):
         return str(self.tutorialSession)
 
@@ -59,6 +59,9 @@ class AttenData(BaseObject, Model):
 
     def get_play_atten_check(self):
         return str(self.playAttCheck)
+
+    def get_play_volume(self):
+        return str(self.volume)
 
     def errors(self):
         errors = super(AttenData, self).errors()

@@ -31,7 +31,7 @@ class TaskData(BaseObject, Model):
     reactionTime          = Column(Text(length=10000))
     playFbSound           = Column(Text(length=10000))
     fbTime                = Column(Text(length=10000))
-
+    volume                = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -101,6 +101,9 @@ class TaskData(BaseObject, Model):
 
     def get_fb_time(self):
         return str(self.fbTime)
+
+    def get_volume(self):
+        return str(self.volume)
 
     def errors(self):
         errors = super(TaskData, self).errors()

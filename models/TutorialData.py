@@ -28,13 +28,14 @@ class TutorialData(BaseObject, Model):
     reactionTime        = Column(Text(length=10000))
     playFbSound         = Column(Text(length=10000))
     fbTime              = Column(Text(length=10000))
+    volume              = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
 
     def get_userID(self):
         return str(self.userID)
-        
+
     def get_date(self):
         return str(self.date)
 
@@ -91,6 +92,9 @@ class TutorialData(BaseObject, Model):
 
     def get_fb_time(self):
         return str(self.fbTime)
+
+    def get_volume(self):
+        return str(self.volume)
 
     def errors(self):
         errors = super(TutorialData, self).errors()

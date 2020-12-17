@@ -26,6 +26,7 @@ def create_tutorial_data(user_id):
     tutorial_data.reactionTime = str(content['reactionTime'])
     tutorial_data.playFbSound = str(content['playFbSound'])
     tutorial_data.fbTime = str(content['fbTime'])
+    tutorial_data.volume = str(content['volume'])
     BaseObject.check_and_save(tutorial_data)
     result = dict({"success": "yes"})
     return jsonify(result)
