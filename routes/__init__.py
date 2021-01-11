@@ -5,3 +5,4 @@ import routes.tutorial_data
 import routes.tutorial_quiz
 import routes.atten_data
 import routes.vol_cal
+import routes.bonus

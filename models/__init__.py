@@ -9,6 +9,7 @@ from models.TutorialData import TutorialData
 from models.TutorialQuiz import TutorialQuiz
 from models.AttenData import AttenData
 from models.VolCal import VolCal
+from models.Bonus import Bonus
 
 __all__ = (
     'ApiErrors',
@@ -19,4 +20,5 @@ __all__ = (
     'TaskQuiz',
     'AttenData',
     'VolCal',
+    'Bonus',
 )
