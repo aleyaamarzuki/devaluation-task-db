@@ -11,6 +11,7 @@ def create_cond_data(user_id):
     cond_data.date        = str(content['date'])
     cond_data.startTime   = str(content['startTime'])
     cond_data.restartTime   = str(content['restartTime'])
+    cond_data.session   = str(content['session'])
     cond_data.stimCondTrack   = str(content['stimCondTrack'])
     cond_data.totalTrialLog1 = str(content['totalTrialLog1'])
     cond_data.totalTrialLog2 = str(content['totalTrialLog2'])

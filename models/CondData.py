@@ -13,6 +13,7 @@ class CondData(BaseObject, Model):
     date                = Column(Text(length=10000))
     startTime           = Column(Text(length=10000))
     restartTime           = Column(Text(length=10000))
+    session= Column(Text(length=10000))
     stimCondTrack           = Column(Text(length=10000))
     totalTrialLog1 = Column(Text(length=10000))
     totalTrialLog2 = Column(Text(length=10000))
@@ -56,6 +57,9 @@ class CondData(BaseObject, Model):
 
     def get_restartTime(self):
         return str(self.restartTime)
+
+    def get_session(self):
+        return str(self.session)
 
     def get_stimCondTrack(self):
         return str(self.stimCondTrack)
