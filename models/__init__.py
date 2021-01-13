@@ -10,6 +10,8 @@ from models.TutorialQuiz import TutorialQuiz
 from models.AttenData import AttenData
 from models.VolCal import VolCal
 from models.Bonus import Bonus
+from models.CondData import CondData
+from models.PsychQuiz import PsychQuiz
 
 __all__ = (
     'ApiErrors',
@@ -21,4 +23,6 @@ __all__ = (
     'AttenData',
     'VolCal',
     'Bonus',
+    'CondData',
+    'PsychQuiz',
 )

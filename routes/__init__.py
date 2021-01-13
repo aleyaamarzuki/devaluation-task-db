@@ -6,3 +6,5 @@ import routes.tutorial_quiz
 import routes.atten_data
 import routes.vol_cal
 import routes.bonus
+import routes.cond_data
+import routes.psych_quiz
