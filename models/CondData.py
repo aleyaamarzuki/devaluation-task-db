@@ -9,36 +9,32 @@ class CondData(BaseObject, Model):
 
     id = Column(Integer, primary_key=True)
 
-    userID                = Column(Text(length=10000))
+    userID              = Column(Text(length=10000))
     date                = Column(Text(length=10000))
     startTime           = Column(Text(length=10000))
-    restartTime           = Column(Text(length=10000))
-    session= Column(Text(length=10000))
-    stimCondTrack           = Column(Text(length=10000))
+    restartTime         = Column(Text(length=10000))
+    session             = Column(Text(length=10000))
+    taskSession         = Column(Text(length=10000))
+    taskSessionTry      = Column(Text(length=10000))
+    stimCondTrack       = Column(Text(length=10000))
     totalTrialLog1 = Column(Text(length=10000))
     totalTrialLog2 = Column(Text(length=10000))
     totalTrialLog3 = Column(Text(length=10000))
-
     trialPerBlockNumLog1 = Column(Text(length=10000))
     trialPerBlockNumLog2 = Column(Text(length=10000))
     trialPerBlockNumLog3 = Column(Text(length=10000))
-
     stimIndexLog1 = Column(Text(length=10000))
     stimIndexLog2 = Column(Text(length=10000))
     stimIndexLog3 = Column(Text(length=10000))
-
     attenIndexLog1 = Column(Text(length=10000))
     attenIndexLog2 = Column(Text(length=10000))
     attenIndexLog3 = Column(Text(length=10000))
-
     totalBlockLog1 = Column(Text(length=10000))
     totalBlockLog2 = Column(Text(length=10000))
     totalBlockLog3 = Column(Text(length=10000))
-
     attenCheckAllLog1 = Column(Text(length=10000))
     attenCheckAllLog2 = Column(Text(length=10000))
     attenCheckAllLog3 = Column(Text(length=10000))
-
     outcomeLog1 = Column(Text(length=10000))
     outcomeLog2 = Column(Text(length=10000))
     outcomeLog3 = Column(Text(length=10000))
@@ -57,6 +53,12 @@ class CondData(BaseObject, Model):
 
     def get_restartTime(self):
         return str(self.restartTime)
+
+    def get_startTime(self):
+        return str(self.taskSession)
+
+    def get_restartTime(self):
+        return str(self.taskSessionTry)
 
     def get_session(self):
         return str(self.session)

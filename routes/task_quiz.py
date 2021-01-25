@@ -27,6 +27,7 @@ def create_task_quiz(user_id):
     task_quiz.quizSoundLabel= str(content['quizSoundLabel'])
     task_quiz.playNum = str(content['playNum'])
     task_quiz.quizVolume = str(content['quizVolume'])
+    task_quiz.quizVolumeNotLog = str(content['quizVolumeNotLog'])
     task_quiz.quizAverDefault= str(content['quizAverDefault'])
     task_quiz.quizAver= str(content['quizAver'])
 

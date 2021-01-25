@@ -29,6 +29,7 @@ class TutorialData(BaseObject, Model):
     playFbSound         = Column(Text(length=10000))
     fbTime              = Column(Text(length=10000))
     volume              = Column(Text(length=10000))
+    volumeNotLog        = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -95,6 +96,9 @@ class TutorialData(BaseObject, Model):
 
     def get_volume(self):
         return str(self.volume)
+
+    def get_volumeNotLog(self):
+        return str(self.volumeNotLog)
 
     def errors(self):
         errors = super(TutorialData, self).errors()

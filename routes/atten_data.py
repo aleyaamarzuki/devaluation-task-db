@@ -21,6 +21,7 @@ def create_atten_data(user_id):
     atten_data.attenCheckTime = str(content['attenCheckTime'])
     atten_data.playAttCheck = str(content['playAttCheck'])
     atten_data.volume = str(content['volume'])
+    atten_data.volumeNotLog = str(content['volumeNotLog'])
     BaseObject.check_and_save(atten_data)
     result = dict({"success": "yes"})
     return jsonify(result)

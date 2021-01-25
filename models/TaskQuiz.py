@@ -29,6 +29,7 @@ class TaskQuiz(BaseObject, Model):
     quizSoundLabel       = Column(Text(length=10000))
     playNum              = Column(Text(length=10000))
     quizVolume           = Column(Text(length=10000))
+    quizVolumeNotLog     = Column(Text(length=10000))
     quizAverDefault      = Column(Text(length=10000))
     quizAver             = Column(Text(length=10000))
 
@@ -95,6 +96,9 @@ class TaskQuiz(BaseObject, Model):
 
     def get_quizVolume(self):
         return str(self.quizVolume)
+
+    def get_quizVolumeNotLog(self):
+        return str(self.quizVolumeNotLog)
 
     def get_sound_aver_def(self):
         return str(self.quizAverDefault)

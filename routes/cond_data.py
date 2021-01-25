@@ -7,11 +7,13 @@ from sqlalchemy.sql.expression import func
 def create_cond_data(user_id):
     content = request.json
     cond_data = CondData()
-    cond_data.userID = str(content['userID'])
+    cond_data.userID      = str(content['userID'])
     cond_data.date        = str(content['date'])
     cond_data.startTime   = str(content['startTime'])
     cond_data.restartTime   = str(content['restartTime'])
-    cond_data.session   = str(content['session'])
+    cond_data.session       = str(content['session'])
+    cond_data.taskSession   = str(content['taskSession'])
+    cond_data.taskSessionTry = str(content['taskSessionTry'])
     cond_data.stimCondTrack   = str(content['stimCondTrack'])
     cond_data.totalTrialLog1 = str(content['totalTrialLog1'])
     cond_data.totalTrialLog2 = str(content['totalTrialLog2'])

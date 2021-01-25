@@ -6,20 +6,21 @@ from models.base_object import BaseObject
 
 class AttenData(BaseObject, Model):
 
-    id = Column(Integer, primary_key=True)
-    userID = Column(Text(length=10000))
+    id                  = Column(Integer, primary_key=True)
+    userID              = Column(Text(length=10000))
     date                = Column(Text(length=10000))
     startTime           = Column(Text(length=10000))
-    tutorialSession = Column(Text(length=10000))
-    tutorialSessionTry = Column(Text(length=10000))
-    taskSession = Column(Text(length=10000))
-    taskSessionTry = Column(Text(length=10000))
-    attenTrial = Column(Text(length=10000))
-    attenTime = Column(Text(length=10000))
-    attenCheckKey = Column(Text(length=10000))
-    attenCheckTime = Column(Text(length=10000))
-    playAttCheck = Column(Text(length=10000))
-    volume = Column(Text(length=10000))
+    tutorialSession     = Column(Text(length=10000))
+    tutorialSessionTry  = Column(Text(length=10000))
+    taskSession         = Column(Text(length=10000))
+    taskSessionTry      = Column(Text(length=10000))
+    attenTrial          = Column(Text(length=10000))
+    attenTime           = Column(Text(length=10000))
+    attenCheckKey       = Column(Text(length=10000))
+    attenCheckTime      = Column(Text(length=10000))
+    playAttCheck        = Column(Text(length=10000))
+    volume              = Column(Text(length=10000))
+    volumeNotLog        = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -62,6 +63,9 @@ class AttenData(BaseObject, Model):
 
     def get_play_volume(self):
         return str(self.volume)
+
+    def get_play_volumeNotLog(self):
+        return str(self.volumeNotLog)
 
     def errors(self):
         errors = super(AttenData, self).errors()
