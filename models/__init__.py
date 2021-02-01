@@ -12,6 +12,7 @@ from models.VolCal import VolCal
 from models.Bonus import Bonus
 from models.CondData import CondData
 from models.PsychQuiz import PsychQuiz
+from models.Feedback import Feedback
 
 __all__ = (
     'ApiErrors',
@@ -25,4 +26,5 @@ __all__ = (
     'Bonus',
     'CondData',
     'PsychQuiz',
+    'Feedback',
 )
