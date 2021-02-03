@@ -30,7 +30,7 @@ def create_task_quiz(user_id):
     task_quiz.quizVolumeNotLog = str(content['quizVolumeNotLog'])
     task_quiz.quizAverDefault= str(content['quizAverDefault'])
     task_quiz.quizAver= str(content['quizAver'])
-
+    task_quiz.checkPoint= str(content['checkPoint'])
     BaseObject.check_and_save(task_quiz)
     result = dict({"success": "yes"})
     return jsonify(result)

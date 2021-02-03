@@ -32,7 +32,7 @@ class TaskQuiz(BaseObject, Model):
     quizVolumeNotLog     = Column(Text(length=10000))
     quizAverDefault      = Column(Text(length=10000))
     quizAver             = Column(Text(length=10000))
-
+    checkPoint           = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -105,6 +105,9 @@ class TaskQuiz(BaseObject, Model):
 
     def get_sound_aver(self):
         return str(self.quizAver)
+
+    def get_checkPoint(self):
+        return str(self.checkPoint)
 
     def errors(self):
         errors = super(TaskQuiz, self).errors()
