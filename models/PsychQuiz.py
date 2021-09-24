@@ -21,8 +21,9 @@ class PsychQuiz(BaseObject, Model):
     PgFinish_BIS11    = Column(Text(length=10000))
     PgFinish_SDS      = Column(Text(length=10000))
     PgFinish_ASI3   = Column(Text(length=10000))
+    PgFinish_BEAQ   = Column(Text(length=10000))
     PgFinish_IQ_text    = Column(Text(length=10000))
-    PgFinish_IQ_2image      = Column(Text(length=10000))
+    PgFinish_IQ_image      = Column(Text(length=10000))
     PgRT_demo        = Column(Text(length=10000))
     PgRT_OCIR        = Column(Text(length=10000))
     PgRT_STAI_Y1     = Column(Text(length=10000))
@@ -30,6 +31,7 @@ class PsychQuiz(BaseObject, Model):
     PgRT_BIS11       = Column(Text(length=10000))
     PgRT_SDS         = Column(Text(length=10000))
     PgRT_ASI3       = Column(Text(length=10000))
+    PgRT_BEAQ      = Column(Text(length=10000))
     PgRT_IQ_text       = Column(Text(length=10000))
     PgRT_IQ_image        = Column(Text(length=10000))
     age              = Column(Text(length=10000))
@@ -40,6 +42,7 @@ class PsychQuiz(BaseObject, Model):
     BIS11            = Column(Text(length=10000))
     SDS              = Column(Text(length=10000))
     ASI3              = Column(Text(length=10000))
+    BEAQ              = Column(Text(length=10000))
     IQ_1              = Column(Text(length=10000))
     IQ_2              = Column(Text(length=10000))
     IQ_3              = Column(Text(length=10000))
@@ -97,9 +100,12 @@ class PsychQuiz(BaseObject, Model):
         return str(self.PgFinish_ASI3)
 
     def get_pg8_finish(self):
-        return str(self.PgFinish_IQ_text)
+        return str(self.PgFinish_BEAQ)
 
     def get_pg9_finish(self):
+        return str(self.PgFinish_IQ_text)
+
+    def get_pg10_finish(self):
         return str(self.PgFinish_IQ_image)
 
     def get_pg0_rt(self):
@@ -124,9 +130,12 @@ class PsychQuiz(BaseObject, Model):
         return str(self.PgRT_ASI3)
 
     def get_pg8_rt(self):
-        return str(self.PgRT_IQ_text)
+        return str(self.PgRT_BEAQ)
 
     def get_pg9_rt(self):
+        return str(self.PgRT_IQ_text)
+
+    def get_pg10_rt(self):
         return str(self.PgRT_IQ_image)
 
     def get_age(self):
@@ -152,6 +161,9 @@ class PsychQuiz(BaseObject, Model):
 
     def get_asi(self):
         return str(self.ASI3)
+
+    def get_beaq(self):
+        return str(self.BEAQ)
 
     def get_iq1(self):
         return str(self.IQ_1)
