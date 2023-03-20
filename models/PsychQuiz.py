@@ -16,33 +16,65 @@ class PsychQuiz(BaseObject, Model):
     qnTimeEnd        = Column(Text(length=10000))
     PgFinish_demo    = Column(Text(length=10000))
     PgFinish_OCIR    = Column(Text(length=10000))
-    PgFinish_STAI_Y1  = Column(Text(length=10000))
+
     PgFinish_STAI_Y2  = Column(Text(length=10000))
     PgFinish_BIS11    = Column(Text(length=10000))
     PgFinish_SDS      = Column(Text(length=10000))
     PgFinish_ASI3   = Column(Text(length=10000))
     PgFinish_BEAQ   = Column(Text(length=10000))
+
+    PgFinish_WHOQOL_1   = Column(Text(length=10000))
+    PgFinish_WHOQOL_2   = Column(Text(length=10000))
+    PgFinish_WHOQOL_3   = Column(Text(length=10000))
+    PgFinish_WHOQOL_4   = Column(Text(length=10000))
+    PgFinish_WHOQOL_5   = Column(Text(length=10000))
+    PgFinish_WHOQOL_6   = Column(Text(length=10000))
+    PgFinish_WHOQOL_7   = Column(Text(length=10000))
+    PgFinish_WHOQOL_8   = Column(Text(length=10000))
+
     PgFinish_IQ_text    = Column(Text(length=10000))
     PgFinish_IQ_image      = Column(Text(length=10000))
+
     PgRT_demo        = Column(Text(length=10000))
     PgRT_OCIR        = Column(Text(length=10000))
-    PgRT_STAI_Y1     = Column(Text(length=10000))
+
     PgRT_STAI_Y2     = Column(Text(length=10000))
     PgRT_BIS11       = Column(Text(length=10000))
     PgRT_SDS         = Column(Text(length=10000))
     PgRT_ASI3       = Column(Text(length=10000))
     PgRT_BEAQ      = Column(Text(length=10000))
+
+    PgRT_WHOQOL_1   = Column(Text(length=10000))
+    PgRT_WHOQOL_2   = Column(Text(length=10000))
+    PgRT_WHOQOL_3   = Column(Text(length=10000))
+    PgRT_WHOQOL_4   = Column(Text(length=10000))
+    PgRT_WHOQOL_5   = Column(Text(length=10000))
+    PgRT_WHOQOL_6   = Column(Text(length=10000))
+    PgRT_WHOQOL_7   = Column(Text(length=10000))
+    PgRT_WHOQOL_8   = Column(Text(length=10000))
+
+
     PgRT_IQ_text       = Column(Text(length=10000))
     PgRT_IQ_image        = Column(Text(length=10000))
     age              = Column(Text(length=10000))
     gender           = Column(Text(length=10000))
     OCIR             = Column(Text(length=10000))
-    STAI_Y1          = Column(Text(length=10000))
     STAI_Y2          = Column(Text(length=10000))
     BIS11            = Column(Text(length=10000))
     SDS              = Column(Text(length=10000))
     ASI3              = Column(Text(length=10000))
+
     BEAQ              = Column(Text(length=10000))
+
+    WHOQOL_1   = Column(Text(length=10000))
+    WHOQOL_2   = Column(Text(length=10000))
+    WHOQOL_3   = Column(Text(length=10000))
+    WHOQOL_4   = Column(Text(length=10000))
+    WHOQOL_5   = Column(Text(length=10000))
+    WHOQOL_6   = Column(Text(length=10000))
+    WHOQOL_7   = Column(Text(length=10000))
+    WHOQOL_8   = Column(Text(length=10000))
+
     IQ_1              = Column(Text(length=10000))
     IQ_2              = Column(Text(length=10000))
     IQ_3              = Column(Text(length=10000))
@@ -84,9 +116,6 @@ class PsychQuiz(BaseObject, Model):
     def get_pg1_finish(self):
         return str(self.PgFinish_OCIR)
 
-    def get_pg2_finish(self):
-        return str(self.PgFinish_STAI_Y1)
-
     def get_pg3_finish(self):
         return str(self.PgFinish_STAI_Y2)
 
@@ -102,6 +131,30 @@ class PsychQuiz(BaseObject, Model):
     def get_pg8_finish(self):
         return str(self.PgFinish_BEAQ)
 
+    def get_pg11_finish(self):
+        return str(self.PgFinish_WHOQOL_1)
+
+    def get_pg12_finish(self):
+        return str(self.PgFinish_WHOQOL_2)
+
+    def get_pg13_finish(self):
+        return str(self.PgFinish_WHOQOL_3)
+
+    def get_pg14_finish(self):
+        return str(self.PgFinish_WHOQOL_4)
+
+    def get_pg15_finish(self):
+        return str(self.PgFinish_WHOQOL_5)
+
+    def get_pg16_finish(self):
+        return str(self.PgFinish_WHOQOL_6)
+
+    def get_pg17_finish(self):
+        return str(self.PgFinish_WHOQOL_7)
+
+    def get_pg18_finish(self):
+        return str(self.PgFinish_WHOQOL_8)
+
     def get_pg9_finish(self):
         return str(self.PgFinish_IQ_text)
 
@@ -113,9 +166,6 @@ class PsychQuiz(BaseObject, Model):
 
     def get_pg1_rt(self):
         return str(self.PgRT_OCIR)
-
-    def get_pg2_rt(self):
-        return str(self.PgRT_STAI_Y1)
 
     def get_pg3_rt(self):
         return str(self.PgRT_STAI_Y2)
@@ -132,6 +182,30 @@ class PsychQuiz(BaseObject, Model):
     def get_pg8_rt(self):
         return str(self.PgRT_BEAQ)
 
+     def get_pg11_rt(self):
+        return str(self.PgRT_WHOQOL_1)
+
+    def get_pg12_rt(self):
+        return str(self.PgRT_WHOQOL_2)
+
+    def get_pg13_rt(self):
+        return str(self.PgRT_WHOQOL_3)
+
+    def get_pg14_rt(self):
+        return str(self.PgRT_WHOQOL_4)
+
+    def get_pg15_rt(self):
+        return str(self.PgRT_WHOQOL_5)
+
+    def get_pg16_rt(self):
+        return str(self.PgRT_WHOQOL_6)
+
+    def get_pg17_rt(self):
+        return str(self.PgRT_WHOQOL_7)
+
+    def get_pg18_rt(self):
+        return str(self.PgRT_WHOQOL_8)
+
     def get_pg9_rt(self):
         return str(self.PgRT_IQ_text)
 
@@ -147,9 +221,6 @@ class PsychQuiz(BaseObject, Model):
     def get_ocir(self):
         return str(self.OCIR)
 
-    def get_staiOne(self):
-        return str(self.STAI_Y1)
-
     def get_staiTwo(self):
         return str(self.STAI_Y2)
 
@@ -164,6 +235,31 @@ class PsychQuiz(BaseObject, Model):
 
     def get_beaq(self):
         return str(self.BEAQ)
+
+     def get_pg11_whoqol_1(self):
+        return str(self.WHOQOL_1)
+
+    def get_pg12_whoqol_2(self):
+        return str(self.WHOQOL_2)
+
+    def get_pg13_whoqol_3(self):
+        return str(self.WHOQOL_3)
+
+    def get_pg14_whoqol_4(self):
+        return str(self.WHOQOL_4)
+
+    def get_pg15_whoqol_5(self):
+        return str(self.WHOQOL_5)
+
+    def get_pg16_whoqol_6(self):
+        return str(self.WHOQOL_6)
+
+    def get_pg17_whoqol_7(self):
+        return str(self.WHOQOL_7)
+
+    def get_pg18_whoqol_8(self):
+        return str(self.WHOQOL_8)
+
 
     def get_iq1(self):
         return str(self.IQ_1)
